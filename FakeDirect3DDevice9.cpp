@@ -38,11 +38,7 @@ HRESULT FakeDirect3DDevice9::TestCooperativeLevel(void)
 
 UINT FakeDirect3DDevice9::GetAvailableTextureMem(void)
 {
-	UINT ret = m_pIDirect3DDevice9->GetAvailableTextureMem();
-	if (ret > (UINT)INT_MAX)
-		ret = (UINT)INT_MAX;
-	return(ret);
-	// return(m_pIDirect3DDevice9->GetAvailableTextureMem());
+	return(m_pIDirect3DDevice9->GetAvailableTextureMem());
 }
 
 HRESULT FakeDirect3DDevice9::EvictManagedResources(void)
